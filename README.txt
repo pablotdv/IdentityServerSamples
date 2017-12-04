@@ -1,1 +1,1 @@
-https://identityserver4.readthedocs.io/en/release/quickstarts/1_client_credentials.html
+https://identityserver4.readthedocs.io/en/release/quickstarts/3_interactive_login.html#creating-an-mvc-client
