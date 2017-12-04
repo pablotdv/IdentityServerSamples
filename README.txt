@@ -1,1 +1,1 @@
-https://identityserver4.readthedocs.io/en/release/quickstarts/3_interactive_login.html#creating-an-mvc-client
+https://identityserver4.readthedocs.io/en/release/quickstarts/4_external_authentication.html
