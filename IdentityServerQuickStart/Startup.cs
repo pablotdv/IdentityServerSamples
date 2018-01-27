@@ -32,6 +32,20 @@ namespace IdentityServerQuickStart
 
                     options.ClientId = "25794815965-5qrgrdgq75rv5dvp9jntu7ho3823mv4m.apps.googleusercontent.com";
                     options.ClientSecret = "uk9EtKNZh045PqygSMyVqioB";
+                })
+                .AddOpenIdConnect("oidc","OpenID Connect", options => 
+                {
+                    options.SignInScheme = IdentityServerConstants.ExternalCookieAuthenticationScheme;
+                    options.SignOutScheme = IdentityServerConstants.SignoutScheme;
+
+                    options.Authority = "https://demo.identityserver.io";
+                    options.ClientId = "implicit";
+
+                    options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
+                    {
+                        NameClaimType = "name",
+                        RoleClaimType = "role"
+                    };
                 });
         }
 
