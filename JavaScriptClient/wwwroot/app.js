@@ -24,7 +24,7 @@ var config = {
     redirect_uri: "http://localhost:5003/callback.html",
     response_type: "id_token token",
     scope: "openid profile api1",
-    post_logout_redirect_uri: "http://localhost:5003/index.html",
+    post_logout_redirect_uri: "http://localhost:5003/index.html"
 };
 var mgr = new Oidc.UserManager(config);
 
@@ -49,7 +49,7 @@ function api() {
         xhr.open("GET", url);
         xhr.onload = function () {
             log(xhr.status, JSON.parse(xhr.responseText));
-        }
+        };
         xhr.setRequestHeader("Authorization", "Bearer " + user.access_token);
         xhr.send();
     });
